@@ -1,0 +1,33 @@
+{
+    "name": "谷歌浏览器菜单页面切换",
+    "description" : "这个扩展程序可以让你方便地切换浏览器打开的页面，不用烦恼打开的页面太多，找不到想要看的页面",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "helloTable.png",
+      "default_title": "这是Chrome插件table页面切换"
+    },
+    // "permissions": ["storage"],
+   // "options_page": "preferences.html",
+   "permissions": [ "contextMenus", "notifications", "storage","activeTab","contextMenus","downloads", "tabs", "http://*/*", "https://*/*", "activeTab" ],
+    
+    "background":
+	{
+		// 2种指定方式，如果指定JS，那么会自动生成一个背景页
+		"scripts": ["js/background.js"]
+	},
+  "icons": {
+      "128": "helloTable.png"
+    },
+	"content_scripts": [ {
+      "js": [ "/js/jquery-1.8.3.min.js",  "/js/content.js" ],
+      "css":["/css/style.css"],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   	}, {
+      "css": [ "css/popup.css" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   	}]
+}

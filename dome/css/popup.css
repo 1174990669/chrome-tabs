@@ -1,0 +1,43 @@
+.WDX-margin-nul p{
+	display: block;
+	margin:0;
+	padding: 0;
+	line-height:100%;
+}
+.WDX-margin-nul{
+	margin: 0;
+	padding:0;
+}
+.WDX-margin-nul .div-common{
+	width: 300px;
+	height: 500px;
+	padding:10px 0;
+	overflow-y: auto;
+	background: #FFFFFF;
+	box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.24);
+	border-radius: 6px;
+
+}
+.WDX-margin-nul .Tab-list{
+	height: 34px;
+	width: 90%;
+	margin: 0 auto;
+	color: #999;
+	font-size: 14px;
+	line-height:34px;
+	cursor:pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.WDX-margin-nul .Tab-list span{
+    display: block;
+}
+.WDX-margin-nul .Tab-list i{
+	display: none;
+    float: left;
+    margin-right: 6px;
+    color: #ff4a3b;
+    font-style: normal;
+}
