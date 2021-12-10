@@ -19,6 +19,9 @@ chrome插件开发 - tab选项卡管理器（谷歌浏览器页面快速切换�
 ![image](https://user-images.githubusercontent.com/30229036/145512533-441cbd02-965f-46e0-ad3b-48a98cdde5bc.png)
 
 chrome.tabs.highlight({windowId: wId, tabs: dat});
+
 第一个参数是用来区分多屏幕的，第二个是需要切换的屏幕id；
+
 chrome.windows.update(wId, {focused: true});
+
 当前屏幕可以直接切换，多屏幕的需要调用该方法实现聚焦
